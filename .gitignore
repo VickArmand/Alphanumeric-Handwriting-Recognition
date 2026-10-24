@@ -3,3 +3,4 @@
 *.keras
 venv/
 .env
+__pycache__/

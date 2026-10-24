@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import JSONResponse
 from utils import data_transformation, predict_character
 app = FastAPI()
 
@@ -9,4 +10,14 @@ def read_root():
 @app.post("/predict")
 def predict():
     data_transformation()
-    return {"res": predict_character()}
+    result = predict_character([])
+    if result.get('success'):
+        return JSONResponse(
+            content={"res": result.get('res')},
+            status_code=201
+        )
+    else:
+        return JSONResponse(
+                    content={"error": result.get('error')},
+                    status_code=500
+                )

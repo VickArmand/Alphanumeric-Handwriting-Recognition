@@ -1,6 +1,7 @@
 ## ALPHANUMERIC HANDWRITING RECOGNITION
 
-<p>This is a Neural network project that recognizes handwritten alphanumeric characters and returns the intended character.</p>
+<p>This is a Neural network project that recognizes handwritten alphanumeric characters and returns the intended character.
+<br>This project will involve a deep learning model, an API and a mobile application</p>
 <h4>Objectives</h4>
 <ul>
 <li>Develop an Neural network model for prediction</li>

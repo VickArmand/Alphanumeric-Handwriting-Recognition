@@ -1,0 +1,10 @@
+fastapi==0.162.0
+fastapi-cli==0.0.32
+fastapi-cloud-cli==0.26.0
+ipykernel==7.4.0
+numpy==2.5.4
+python-dotenv==1.2.4
+scikit-learn==1.9.1
+seaborn==0.13.2
+tensorflow==2.22.0rc0
+uvicorn==0.54.0

@@ -27,7 +27,6 @@ function getDevMenuHint() {
     </ThemedText>
   );
 }
-
 export default function HomeScreen() {
   return (
     <ThemedView style={styles.container}>

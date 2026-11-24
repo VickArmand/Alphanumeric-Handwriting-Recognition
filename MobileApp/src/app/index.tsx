@@ -8,7 +8,8 @@ import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { WebBadge } from '@/components/web-badge';
 import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
-
+import { WithSkiaWeb } from "react-native-skia/lib/module/web";
+import { Text } from 'react-native';
 function getDevMenuHint() {
   if (Platform.OS === 'web') {
     return <ThemedText type="small">use browser devtools</ThemedText>;
@@ -53,7 +54,10 @@ export default function HomeScreen() {
             hint={<ThemedText type="code">npm run reset-project</ThemedText>}
           />
         </ThemedView>
-
+        <WithSkiaWeb
+          getComponent={() => import("../components/skia-canvas")}
+          fallback={<Text>Canvas Loading ....</Text>}
+        />
         {Platform.OS === 'web' && <WebBadge />}
       </SafeAreaView>
     </ThemedView>
